@@ -1,0 +1,50 @@
+.subject-item {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    margin: 8px 0px 0px 0px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 8px;
+    flex: 1;
+}
+
+.content > b {
+    margin-bottom: 8px;
+}
+
+.thumbnail {
+    width: 100px;
+    height: 140px;
+}
+
+.director {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: gray;
+}
+
+.director > p {
+    margin: 0;
+    margin-right: 8px;
+}
+
+.director > a {
+    margin-right: 8px;
+}
+
+.rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rating > b {
+    font-size: 3em;
+    color: gray;
+}
