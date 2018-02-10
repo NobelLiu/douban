@@ -1,0 +1,25 @@
+<div [el-loading]="!top250Subjects">
+</div>
+<div *ngFor="let subject of top250Subjects" class="subject-item" routerLink="/movie">
+  <img [src]="subject.images.small" class="image thumbnail">
+  <div class="content">
+    <b>{{subject.title}}</b>
+    <div class="director">
+      <p>导演:</p>
+      <a *ngFor="let director of subject.directors">{{director.name}}</a>
+    </div>
+    <div class="director">
+      <p>主演:</p>
+      <a *ngFor="let cast of subject.casts">{{cast.name}}</a>
+    </div>
+    <div class="director">
+      <p>类型:</p>
+      <a *ngFor="let genre of subject.genres">{{genre}}</a>
+    </div>
+  </div>
+  <div class="rating">
+    <b>{{subject.rating.average}}</b>
+    <el-rate [model]="subject.rating.average/2" [elDisabled]="true" [text-color]="'#ff9900'">
+    </el-rate>
+  </div>
+</div>

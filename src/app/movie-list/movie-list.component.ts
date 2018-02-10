@@ -3,11 +3,11 @@ import { HttpClient } from '@angular/common/http';
 import { Movie } from '../movie';
 
 @Component({
-  selector: 'app-list',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css']
+  selector: 'app-movie-list',
+  templateUrl: './movie-list.component.html',
+  styleUrls: ['./movie-list.component.css']
 })
-export class ListComponent implements OnInit {
+export class MovieListComponent implements OnInit {
 
   top250Subjects: Movie[];
 
@@ -33,5 +33,6 @@ export class ListComponent implements OnInit {
   //     .map((response: Response) => response[1])
   //     .map((results: any[]) => results.map((result: string) => result[0]));
   // }
+
 
 }
