@@ -1,8 +1,6 @@
-<div class="header">
+<div class="slider">
   <div class="title-col">
     <h1>豆瓣电影</h1>
-    <el-input placeholder="搜索" icon="search" [model]="searchText" class="search-input">
-    </el-input>
   </div>
   <div class="tabs">
     <a routerLink="/in_theaters" class="highlight">正在热映</a>
@@ -10,6 +8,13 @@
     <a routerLink="/top250" class="normal">Top 250</a>
   </div>
 </div>
-<div class="content">
-  <router-outlet></router-outlet>
+<div class="main">
+  <div class="header">
+    <h3 class="title">正在热映</h3>
+    <el-input placeholder="搜索" icon="search" [model]="searchText" class="search-input">
+    </el-input>
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
 </div>

@@ -18,5 +18,5 @@ html, body, app-root {
 
 app-root {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }

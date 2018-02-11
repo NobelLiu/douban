@@ -1,17 +1,24 @@
-.header {
-    padding: 20px;
-    box-shadow: 0 0 1px rgba(39, 44, 49, 0.1), 0 3px 16px rgba(39, 44, 49, 0.07);
+.slider {
     transition: all .3s ease;
+    width: 280px;
 }
 
 .title-col {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 h1 {
-    margin: 20px 0;
+    margin: 20px 20px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 60px;
+    box-shadow: 0 0 1px rgba(39, 44, 49, 0.1), 0 3px 16px rgba(39, 44, 49, 0.07);
 }
 
 .search-input {
@@ -19,20 +26,21 @@ h1 {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    /* flex: 1; */
     transition: all .3s ease;
 }
 
 .tabs {
+    flex: 1;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .tabs a {
-    margin: 0 10px 0 0;
-    padding: 6px 12px 6px 12px;
-    border-radius: 40px;
+    padding: 14px 20px;
     text-decoration: none;
+    margin: 0 20px;
+    border-radius: 5px;
+    text-align: center;
 }
 
 .normal :hover {
@@ -40,7 +48,8 @@ h1 {
 }
 
 .highlight {
-    background: #339542;
+    background: linear-gradient(to bottom left, #52ca64, #339542);
+    box-shadow: 0 0 1px rgba(39, 44, 49, 0.1), 0 3px 16px rgba(39, 44, 49, 0.07);
     color: white;
 }
 
@@ -56,8 +65,18 @@ h1 {
     min-height: 100px;
 }
 
+.main {
+    flex: 1;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 1px rgba(39, 44, 49, 0.1), 0 3px 16px rgba(39, 44, 49, 0.07);
+}
+
 .content {
     flex: 1;
     overflow: auto;
     padding: 0 20px;
+    display: flex;
+    flex-direction: column;
 }
