@@ -14,7 +14,7 @@ export class ListComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.http.jsonp('http://api.douban.com/v2/movie/top250', 'callback')
+    this.http.jsonp('https://api.douban.com/v2/movie/top250', 'callback')
       .subscribe(res => {
         this.top250Subjects = res['subjects'] as Movie[];
         console.log(this.top250Subjects[0]);

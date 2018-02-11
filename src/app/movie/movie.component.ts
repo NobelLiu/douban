@@ -15,7 +15,7 @@ export class MovieComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.http.jsonp('http://api.douban.com/v2/movie/subject/' + this.id, 'callback')
+    this.http.jsonp('https://api.douban.com/v2/movie/subject/' + this.id, 'callback')
       .subscribe(res => {
         this.movie = res['subjects'] as Movie;
       });

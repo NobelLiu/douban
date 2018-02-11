@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Top250Component implements OnInit {
 
-  url = 'http://api.douban.com/v2/movie/top250';
+  url = 'https://api.douban.com/v2/movie/top250';
 
   constructor() { }
 
