@@ -1,17 +1,15 @@
-<div el-container direction="vertical" class="demo-box">
-  <div el-header>
-    <div class="title-col">
-      <h1>豆瓣电影</h1>
-      <el-input placeholder="搜索" icon="search" [model]="searchText" class="search-input">
-      </el-input>
-    </div>
-    <el-menu [model]="1" (modelChange)="navigationChanged($event)" class="el-menu-demo" mode="horizontal">
-      <el-menu-item index="1">正在热映</el-menu-item>
-      <el-menu-item index="2">即将上映</el-menu-item>
-      <el-menu-item index="3">Top250</el-menu-item>
-    </el-menu>
+<div class="header">
+  <div class="title-col">
+    <h1>豆瓣电影</h1>
+    <el-input placeholder="搜索" icon="search" [model]="searchText" class="search-input">
+    </el-input>
   </div>
-  <div el-main>
-    <router-outlet></router-outlet>
+  <div class="tabs">
+    <a routerLink="/in_theaters" class="highlight">正在热映</a>
+    <a routerLink="/coming_soon" class="normal">即将上映</a>
+    <a routerLink="/top250" class="normal">Top 250</a>
   </div>
+</div>
+<div class="content">
+  <router-outlet></router-outlet>
 </div>

@@ -12,13 +12,14 @@
     flex: 1;
 }
 
-.content > b {
+.content>b {
     margin-bottom: 20px;
 }
 
 .thumbnail {
     width: 100px;
     height: 140px;
+    background: #efefef;
 }
 
 .director {
@@ -28,12 +29,12 @@
     color: gray;
 }
 
-.director > p {
+.director>p {
     margin: 0;
     margin-right: 8px;
 }
 
-.director > a {
+.director>a {
     margin-right: 8px;
 }
 
@@ -44,7 +45,9 @@
     justify-content: center;
 }
 
-.rating > b {
+.rating>b {
     font-size: 3em;
     color: gray;
+    display: flex;
+    flex-direction: row;
 }

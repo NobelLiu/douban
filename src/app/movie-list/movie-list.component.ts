@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Movie } from '../movie';
 
@@ -11,10 +11,12 @@ export class MovieListComponent implements OnInit {
 
   top250Subjects: Movie[];
 
+  @Input() url: string;
+
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.http.jsonp('http://api.douban.com/v2/movie/top250', 'callback')
+    this.http.jsonp(this.url, 'callback')
       .subscribe(res => {
         this.top250Subjects = res['subjects'] as Movie[];
         console.log(this.top250Subjects[0]);
@@ -24,7 +26,8 @@ export class MovieListComponent implements OnInit {
   jsonpCallback(data) {
 
   }
-
+  // in_theaters
+  // coming_soon
 
   // requestJsonp(url, options, callback = 'callback') {
   //   // options.params is an HttpParams object

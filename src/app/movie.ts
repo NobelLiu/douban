@@ -19,4 +19,5 @@ export class Movie {
         max: number
         average: number
     };
+    year: string;
 }

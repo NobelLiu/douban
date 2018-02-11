@@ -12,6 +12,8 @@ import { MovieListComponent } from './movie-list/movie-list.component';
 import { MovieComponent } from './movie/movie.component';
 import { Movie } from './movie';
 import { Top250Component } from './top250/top250.component';
+import { InTheatersComponent } from './in-theaters/in-theaters.component';
+import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { Top250Component } from './top250/top250.component';
     ListComponent,
     MovieListComponent,
     MovieComponent,
-    Top250Component
+    Top250Component,
+    InTheatersComponent,
+    ComingSoonComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +35,18 @@ import { Top250Component } from './top250/top250.component';
     RouterModule.forRoot([
       {
         path: '',
+        component: InTheatersComponent
+      },
+      {
+        path: 'in_theaters',
+        component: InTheatersComponent
+      },
+      {
+        path: 'coming_soon',
+        component: ComingSoonComponent
+      },
+      {
+        path: 'top250',
         component: Top250Component
       },
       {
