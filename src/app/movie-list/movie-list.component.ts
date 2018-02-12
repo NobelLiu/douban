@@ -13,19 +13,21 @@ export class MovieListComponent implements OnInit {
 
   @Input() url: string;
 
+  dialogVisible = false;
+
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.http.jsonp(this.url, 'callback')
-      .subscribe(res => {
-        this.top250Subjects = res['subjects'] as Movie[];
-        console.log(this.top250Subjects[0]);
-      });
-    // this.http.get(this.url)
+    // this.http.jsonp(this.url, 'callback')
     //   .subscribe(res => {
     //     this.top250Subjects = res['subjects'] as Movie[];
     //     console.log(this.top250Subjects[0]);
     //   });
+    this.http.get(this.url)
+      .subscribe(res => {
+        this.top250Subjects = res['subjects'] as Movie[];
+        console.log(this.top250Subjects[0]);
+      });
   }
 
   jsonpCallback(data) {

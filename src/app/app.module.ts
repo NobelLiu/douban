@@ -9,11 +9,11 @@ import { ElModule } from 'element-angular';
 import { AppComponent } from './app.component';
 import { ListComponent } from './list/list.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
-import { MovieComponent } from './movie/movie.component';
 import { Movie } from './movie';
 import { Top250Component } from './top250/top250.component';
 import { InTheatersComponent } from './in-theaters/in-theaters.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
+import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 
 // import './top250.json';
 // import './coming-soon.json';
@@ -24,10 +24,10 @@ import { ComingSoonComponent } from './coming-soon/coming-soon.component';
     AppComponent,
     ListComponent,
     MovieListComponent,
-    MovieComponent,
     Top250Component,
     InTheatersComponent,
-    ComingSoonComponent
+    ComingSoonComponent,
+    MovieDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -36,11 +36,6 @@ import { ComingSoonComponent } from './coming-soon/coming-soon.component';
     HttpClientModule,
     HttpClientJsonpModule,
     RouterModule.forRoot([
-      {
-        path: '',
-        redirectTo: 'in_theaters',
-        pathMatch: 'full'
-      },
       {
         path: 'in_theaters',
         component: InTheatersComponent
@@ -54,8 +49,8 @@ import { ComingSoonComponent } from './coming-soon/coming-soon.component';
         component: Top250Component
       },
       {
-        path: 'movie/:id',
-        component: Movie
+        path: 'detail/:id',
+        component: MovieDetailComponent
       }
     ])
   ],

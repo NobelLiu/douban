@@ -1,0 +1,12 @@
+<div *ngIf="!movie" [el-loading]="!movie" style="margin-top:10px;height:100px">
+</div>
+<div *ngIf="movie" class="container">
+  <div class="header">
+    <h2>{{ movie.title }}</h2>
+    <el-button [round]="true" style="height: 40px;" (click)="goBack()">关闭</el-button>
+  </div>
+  <img [src]="movie.images.large" class="background">
+  <p>
+    {{ movie.summary }}
+  </p>
+</div>

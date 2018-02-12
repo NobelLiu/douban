@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComingSoonComponent implements OnInit {
 
-  url = 'https://api.douban.com/v2/movie/coming_soon';
-  // url = './coming_soon.json';
+  // url = 'https://api.douban.com/v2/movie/coming_soon';
+  url = './assets/coming_soon.json';
 
   constructor() { }
 

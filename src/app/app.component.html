@@ -3,8 +3,7 @@
     <h1>豆瓣电影</h1>
   </div>
   <div class="tabs">
-    <a *ngFor="let module of modules"></a>
-    <a *ngFor="let module of modules" [class.selected]="module === selectedModule" class="normal" (click)="goToModule(module)">{{module.link}}</a>
+    <a *ngFor="let module of modules" [class]="module === selectedModule ? 'selected' : 'normal'" (click)="goToModule(module)">{{ module.title }}</a>
   </div>
   <div class="footer">
     <a href="https://github.com/NobelLiu/douban">View on Github</a>
@@ -12,7 +11,7 @@
 </div>
 <div class="main">
   <div class="header">
-    <h3 class="title">正在热映</h3>
+    <h3 class="title">{{ selectedModule.title }}</h3>
     <el-input placeholder="搜索" icon="search" [model]="searchText" class="search-input">
     </el-input>
   </div>

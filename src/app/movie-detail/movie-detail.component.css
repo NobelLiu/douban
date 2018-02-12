@@ -1,0 +1,10 @@
+.header {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.background {
+    filter: blur(0.4);
+    flex: 1;
+}

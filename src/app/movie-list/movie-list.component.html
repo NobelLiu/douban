@@ -1,7 +1,7 @@
 <div *ngIf="!top250Subjects" [el-loading]="!top250Subjects" style="margin-top:10px;height:100px">
 </div>
 <div class="list">
-  <div *ngFor="let subject of top250Subjects" class="subject-item" [routerLink]="['/movie', subject.id]">
+  <div *ngFor="let subject of top250Subjects" class="subject-item" [routerLink]="['/detail', subject.id]">
     <div class="image">
       <p class="rating">{{subject.rating.average}}</p>
       <img [src]="subject.images.small" class="thumbnail" [alt]="'《'+subject.title+'》'+'海报'">
