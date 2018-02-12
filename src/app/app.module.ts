@@ -15,6 +15,9 @@ import { Top250Component } from './top250/top250.component';
 import { InTheatersComponent } from './in-theaters/in-theaters.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 
+// import './top250.json';
+// import './coming-soon.json';
+// import './in-theaters.json';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,8 @@ import { ComingSoonComponent } from './coming-soon/coming-soon.component';
     RouterModule.forRoot([
       {
         path: '',
-        component: InTheatersComponent
+        redirectTo: 'in_theaters',
+        pathMatch: 'full'
       },
       {
         path: 'in_theaters',
@@ -50,7 +54,7 @@ import { ComingSoonComponent } from './coming-soon/coming-soon.component';
         component: Top250Component
       },
       {
-        path: 'movie',
+        path: 'movie/:id',
         component: Movie
       }
     ])

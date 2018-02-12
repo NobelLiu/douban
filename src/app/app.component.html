@@ -1,11 +1,13 @@
 <div class="slider">
-  <div class="title-col">
+  <div class="header">
     <h1>豆瓣电影</h1>
   </div>
   <div class="tabs">
-    <a routerLink="/in_theaters" class="highlight">正在热映</a>
-    <a routerLink="/coming_soon" class="normal">即将上映</a>
-    <a routerLink="/top250" class="normal">Top 250</a>
+    <a *ngFor="let module of modules"></a>
+    <a *ngFor="let module of modules" [class.selected]="module === selectedModule" class="normal" (click)="goToModule(module)">{{module.link}}</a>
+  </div>
+  <div class="footer">
+    <a href="https://github.com/NobelLiu/douban">View on Github</a>
   </div>
 </div>
 <div class="main">

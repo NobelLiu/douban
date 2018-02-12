@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class Top250Component implements OnInit {
 
   url = 'https://api.douban.com/v2/movie/top250';
+  // url = './top250.json';
 
   constructor() { }
 

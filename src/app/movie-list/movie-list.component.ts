@@ -21,6 +21,11 @@ export class MovieListComponent implements OnInit {
         this.top250Subjects = res['subjects'] as Movie[];
         console.log(this.top250Subjects[0]);
       });
+    // this.http.get(this.url)
+    //   .subscribe(res => {
+    //     this.top250Subjects = res['subjects'] as Movie[];
+    //     console.log(this.top250Subjects[0]);
+    //   });
   }
 
   jsonpCallback(data) {
