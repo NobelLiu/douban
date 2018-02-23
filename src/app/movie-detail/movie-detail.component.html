@@ -5,8 +5,50 @@
     <h2>{{ movie.title }}</h2>
     <el-button [round]="true" style="height: 40px;" (click)="goBack()">关闭</el-button>
   </div>
-  <img [src]="movie.images.large" class="background">
-  <p>
-    {{ movie.summary }}
-  </p>
+  <div class="content">
+    <div class="image">
+      <img [src]="movie.images.small" class="shadow">
+      <img [src]="movie.images.small" class="thumbnail" [alt]="'《'+movie.title+'》'+'海报'">
+    </div>
+    <div class="description">
+      <div class="director">
+        <p>导演：</p>
+        <a *ngFor="let director of movie.directors">{{director.name}}</a>
+      </div>
+      <div class="director">
+        <p>类型：</p>
+        <a *ngFor="let genre of movie.genres">{{genre}}</a>
+      </div>
+      <div class="director">
+        <p>地区：</p>
+        <a *ngFor="let countrie of movie.countries">{{countrie}}</a>
+      </div>
+      <div class="director">
+        <p>年份：</p>
+        <a>{{movie.year}}</a>
+      </div>
+      <div class="director">
+        <p>主演：</p>
+        <div class="casts">
+          <div class="cast" *ngFor="let cast of movie.casts">
+            <img [src]="cast.avatars.large" alt="">
+            <a>{{cast.name}}</a>
+          </div>
+        </div>
+      </div>
+      <div class="director">
+        <p>年份：</p>
+        <a>{{movie.year}}</a>
+      </div>
+      <div class="director">
+        <p>简介：</p>
+        <a>{{ movie.summary }}</a>
+      </div>
+    </div>
+    <div class="line"></div>
+    <div class="rating">
+      <b>{{movie.rating.average}}</b>
+      <p>{{movie.ratings_count}}人参与评分</p>
+    </div>
+  </div>
 </div>

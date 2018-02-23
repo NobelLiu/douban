@@ -3,15 +3,28 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 }
 
 .subject-item {
     display: flex;
     flex-direction: column;
-    margin: 20px 0px 0px 0px;
+    margin: 40px 0px 0px 0px;
     width: 280px;
     align-items: center;
+    transition: all .35s ease-in-out;
+    transform: scale(1);
+}
+
+.subject-item:hover {
+    transform: scale(1.05);
+    transition: all .35s ease-in-out;
+}
+
+.subject-item:focus {
+    outline: 0;
+    transform: scale(1.05);
+    transition: all .35s ease-in-out;
 }
 
 .content {
@@ -36,10 +49,10 @@
 .thumbnail {
     width: 200px;
     height: 290px;
-    background: #efefef;
-    box-shadow: 0 0 1px rgba(39, 44, 49, 0.5), 0 3px 16px rgba(39, 44, 49, 0.35);
-    border-radius: 5px;
-    transition: all .3s ease;
+    background: #f4f8fb;
+    /* box-shadow: 0 0 1px rgba(39, 44, 49, 0.5), 0 3px 16px rgba(39, 44, 49, 0.35); */
+    /* border-radius: 5px; */
+    z-index: 1;
 }
 
 .rating {
@@ -55,11 +68,16 @@
     position: absolute;
     bottom: 0px;
     right: -20px;
+    z-index: 2;
 }
 
-.thumbnail:hover {
-    box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.2), 1px 3px 8px rgba(39, 44, 49, 0.35);
-    transition: all .5s ease;
+.shadow {
+    width: 180px;
+    height: 290px;
+    position: absolute;
+    bottom: -14px;
+    right: 10px;
+    filter: blur(14px);
 }
 
 .director {

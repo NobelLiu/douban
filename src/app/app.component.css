@@ -57,6 +57,7 @@ h1 {
     flex-direction: row;
     justify-content: space-between;
     padding: 0px 20px;
+    background: white;
     box-shadow: 0 0 1px rgba(39, 44, 49, 0.1), 0 3px 16px rgba(39, 44, 49, 0.07);
 }
 
@@ -87,7 +88,6 @@ h1 {
 .content {
     flex: 1;
     overflow: auto;
-    padding: 0 20px;
     display: flex;
     flex-direction: column;
 }

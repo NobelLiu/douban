@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
     { 'title': '即将上映', 'path': '/coming_soon', 'url': './assets/coming_soon.json' },
     { 'title': 'Top 250', 'path': '/top250', 'url': './assets/top250.json' }
   ];
-  selectedModule: Module;
+  selectedModule: Module = this.modules[0];
 
   constructor(
     private http: HttpClient,
